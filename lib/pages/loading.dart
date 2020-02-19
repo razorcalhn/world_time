@@ -37,12 +37,28 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.blueGrey,
-      body: Center(
-        child: SpinKitFadingCircle(
-          color: Colors.white,
-          size: 50.0,
-        ),
+    return Scaffold(backgroundColor: Colors.white,
+      body: Column(
+        children: <Widget>[
+          SizedBox(height: 70,),
+          Image.asset('assets/globe.jpg',height:310 ,width: 310,),
+          SizedBox(height: 120,),
+          Text('W O R L D T I M E',
+            style: TextStyle(
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+                color: Colors.black
+            ),
+
+          ),
+
+          SizedBox(height: 8,),
+          SpinKitFadingCircle(
+            color: Colors.black,
+            size: 30.0,
+          ),
+
+        ],
       ),
     );
   }
